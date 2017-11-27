@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_margin="15dp"
+        android:textColor="@color/bleuDarkCTM"
+        android:text="Profs et Eleves"
+        />
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:tint="@color/bleuDarkCTM"
+            android:src="@drawable/search"/>
+        <EditText
+            android:id="@+id/search_agence"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+         >
+
+
+
+
+     <LinearLayout
+         android:id="@+id/items"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:visibility="gone"
+         android:orientation="horizontal">
+         <LinearLayout
+             android:id="@+id/open_list_eleves"
+             android:visibility="visible"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_marginRight="8dp"
+             android:orientation="vertical">
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="5dp"
+
+                 android:src="@drawable/eleves"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="10dp"
+                 android:textStyle="bold"
+                 android:textColor="@color/bleuDarkCTM"
+                 android:text="Les éléves"/>
+         </LinearLayout>
+         <LinearLayout
+             android:id="@+id/open_list_profs"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:visibility="visible"
+             android:layout_marginLeft="8dp"
+
+             android:orientation="vertical">
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_margin="5dp"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/prof"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="10dp"
+                 android:textStyle="bold"
+                 android:textColor="@color/bleuDarkCTM"
+                 android:text="Les profs"/>
+         </LinearLayout>
+     </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

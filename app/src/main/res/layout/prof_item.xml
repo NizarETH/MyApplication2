@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_color"
+    android:paddingTop="2dp">
+
+    <LinearLayout
+        android:id="@+id/open_prof"
+        android:layout_width="match_parent"
+        android:background="@drawable/back_color"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="6dp"
+        android:paddingBottom="12dp"
+
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/prof_image"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <com.next.myapplication.Widgets.AutoResizeTextView
+                android:id="@+id/prof_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginRight="6dp"
+                android:text="nom"
+                android:textColor="@color/bleuDarkCTM"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.next.myapplication.Widgets.AutoResizeTextView
+
+                android:id="@+id/prof_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="addresse"
+                android:layout_weight="1"
+                android:textColor="@color/bleuCTM1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <ImageView
+
+            android:id="@+id/map_address"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/chevronright"
+
+            android:tint="@color/bleuDarkCTM" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="55dp"
+        android:background="@color/bleuDarkCTM"/>
+
+
+</LinearLayout>

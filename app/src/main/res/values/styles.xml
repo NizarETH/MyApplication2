@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bleu2</item>
+        <item name="colorPrimaryDark">@color/bleu2</item>
+        <item name="colorAccent">@color/bleu2</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@color/bleuDarkCTM</item>
+
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/bleuCTM2</item>
+    </style>
+</resources>
