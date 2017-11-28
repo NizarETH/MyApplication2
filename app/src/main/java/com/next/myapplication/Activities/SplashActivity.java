@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.next.myapplication.Beans.ApplicationBean;
+import com.next.myapplication.Beans.Eleve;
 import com.next.myapplication.Beans.Prof;
 import com.next.myapplication.Fragments.SearchFragment;
 import com.next.myapplication.R;
@@ -47,9 +48,17 @@ public class SplashActivity extends AppCompatActivity {
 
         realm = Realm.getDefaultInstance();
         pd = new ProgressDialog(this);
-        mRequestQueue = Volley.newRequestQueue(this);
 
+        List<Prof> profs = realm.where(Prof.class).findAll();
+        List<Eleve> eleves = realm.where(Eleve.class).findAll();
 
+        if ((profs != null && profs.size() > 0) || (eleves != null && eleves.size() > 0)) {
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
+            finish();
+        } else {
+
+            mRequestQueue = Volley.newRequestQueue(this);
 
             pd.setProgress(0);
             pd.setMessage("Please wait ...");
@@ -77,6 +86,7 @@ public class SplashActivity extends AppCompatActivity {
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             mRequestQueue.add(request);
         }
+    }
     public class parsingData extends AsyncTask<Void,Integer,Void>
     {
 
