@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+
 import com.next.myapplication.Activities.MainActivity;
 import com.next.myapplication.Activities.inApplication;
 import com.next.myapplication.Beans.Prof;
@@ -16,6 +16,7 @@ import com.next.myapplication.Fragments.ProfFragment;
 import com.next.myapplication.R;
 
 import com.next.myapplication.Widgets.AutoResizeTextView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -79,7 +80,7 @@ public class ProfAdapter extends BaseAdapter {
 
             holder.prof_adresse.setText("" + prof.getAdresse());
 
-            Glide.with(mainActivity).load(prof.getPhoto()).into(holder.prof_image);
+            Picasso.with(mainActivity).load(prof.getPhoto()).into(holder.prof_image);
 
 
             row.findViewById(R.id.open_prof).setOnClickListener(new View.OnClickListener() {

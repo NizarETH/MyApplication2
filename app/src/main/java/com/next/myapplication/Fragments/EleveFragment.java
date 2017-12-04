@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+
 import com.next.myapplication.Beans.Eleve;
 import com.next.myapplication.R;
+import com.squareup.picasso.Picasso;
 
 import io.realm.Realm;
 
@@ -42,7 +43,7 @@ public class EleveFragment extends Fragment {
                 ((TextView)v.findViewById(R.id.eleve_name)).setText(eleve.getNom());
                 ((TextView)v.findViewById(R.id.eleve_address)).setText(eleve.getAdresse());
                 ((TextView)v.findViewById(R.id.eleve_ville)).setText(eleve.getVille());
-                Glide.with(getActivity()).load(eleve.getPhoto()).into(((ImageView)v.findViewById(R.id.eleve_image)));
+                Picasso.with(getActivity()).load(eleve.getPhoto()).into(((ImageView)v.findViewById(R.id.eleve_image)));
 
 
             }

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+
 import com.next.myapplication.Activities.MainActivity;
 import com.next.myapplication.Activities.inApplication;
 import com.next.myapplication.Beans.Eleve;
@@ -15,6 +15,7 @@ import com.next.myapplication.Fragments.EleveFragment;
 
 import com.next.myapplication.R;
 import com.next.myapplication.Widgets.AutoResizeTextView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -81,7 +82,8 @@ public class EleveAdapter extends BaseAdapter {
 
             holder.eleve_adresse.setText("" + eleve.getVille());
 
-            Glide.with(mainActivity).load(eleve.getPhoto()).into(holder.eleve_image);
+
+            Picasso.with(mainActivity).load(eleve.getPhoto()).into(holder.eleve_image);
 
 
             row.findViewById(R.id.open_eleve).setOnClickListener(new View.OnClickListener() {

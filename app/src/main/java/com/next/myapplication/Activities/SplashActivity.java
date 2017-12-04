@@ -49,10 +49,10 @@ public class SplashActivity extends AppCompatActivity {
         realm = Realm.getDefaultInstance();
         pd = new ProgressDialog(this);
 
-        List<Prof> profs = realm.where(Prof.class).findAll();
-        List<Eleve> eleves = realm.where(Eleve.class).findAll();
+        ApplicationBean app = realm.where(ApplicationBean.class).findFirst();
 
-        if ((profs != null && profs.size() > 0) || (eleves != null && eleves.size() > 0)) {
+        if (app != null )
+        {
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
             finish();

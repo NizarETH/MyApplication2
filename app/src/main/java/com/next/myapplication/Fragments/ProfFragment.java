@@ -9,10 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+
 import com.next.myapplication.Activities.inApplication;
 import com.next.myapplication.Beans.Prof;
 import com.next.myapplication.R;
+import com.squareup.picasso.Picasso;
 
 import io.realm.Realm;
 
@@ -43,7 +44,7 @@ public class ProfFragment extends Fragment {
               {
                   ((TextView)v.findViewById(R.id.prof_name)).setText(prof.getNom());
                   ((TextView)v.findViewById(R.id.prof_address)).setText(prof.getAdresse());
-                  Glide.with(getActivity()).load(prof.getPhoto()).into(((ImageView)v.findViewById(R.id.prof_image)));
+                  Picasso.with(getActivity()).load(prof.getPhoto()).into(((ImageView)v.findViewById(R.id.prof_image)));
 
                   v.findViewById(R.id.prof_pdf).setOnClickListener(new View.OnClickListener() {
                       @Override
